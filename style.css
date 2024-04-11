@@ -1,0 +1,311 @@
+/* Importeer het Poppins-lettertype van Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* Resetten van standaard marges, padding en box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Algemene sectiestijlen */
+section {
+  padding: 75px 0;
+}
+
+/* Algemene stijlen voor de content container */
+.content {
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 30px;
+}
+
+/* Navbar stijlen */
+.navbar {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  padding: 15px 0;
+  transition: all 0.3s ease;
+}
+
+/* Stijlen voor een sticky navbar */
+.navbar.sticky {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Stijlen voor het logo in de navbar */
+.logo {
+  flex: 1;
+}
+
+.logo img {
+  max-width: 100px;
+}
+
+/* Stijlen voor de menu-items in de navbar */
+.menu-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu-list li {
+  list-style: none;
+  margin-left: 25px;
+}
+
+.menu-list li a {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.menu-list li a:hover {
+  color: rgb(255, 165, 0);
+}
+
+/* Stijlen voor de banner sectie */
+.banner {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.banner-text h1 {
+  font-size: 175px;
+  max-width: 950px;
+  color: rgb(255, 165, 0);
+}
+
+.banner-text p {
+  font-size: 25px;
+  max-width: 600px;
+}
+
+.icon-container {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-container a {
+  margin: 0 10px;
+}
+
+.icon-container img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.icon-container img:hover {
+  transform: scale(1.1);
+}
+
+.title {
+  margin-bottom: 0.5em;
+  font-size: 50px;
+  text-align: center;
+  color: rgb(255, 165, 0);
+}
+
+.about-text {
+  font-size: 18px;
+  max-width: 750px;
+  text-align: center;
+  margin: 1em;
+}
+
+.about-image img {
+  display: flex;
+  justify-content: center;
+  max-width: 300px;
+  margin-top: 1em;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Stijlen voor de projecten container */
+.projects-container {
+  margin: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Stijlen voor individuele project containers */
+.project-container {
+  background-color: #ffffff;
+  border: 1px solid #e1e1e8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 500px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 12px;
+  border-bottom: 1px solid #e1e1e8;
+  margin-bottom: 1em;
+}
+
+.project-details {
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+}
+
+.project-buttons {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 15px;
+}
+
+.btn {
+  padding: 8px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  background-color: rgb(255, 165, 0);
+}
+
+/* Stijlen voor het contactgedeelte */
+#contact {
+  padding: 75px 0;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact-info {
+  font-size: 20px;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: #000000;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: rgb(255, 165, 0);
+}
+
+.contact-info a img {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+/* Mediaquery voor kleinere schermen */
+@media (max-width: 868px) {
+  body.disabledScroll {
+    overflow: hidden;
+  }
+
+  .banner-text h1 {
+    font-size: 60px;
+  }
+
+  .banner-text p {
+    font-size: 18px;
+  }
+
+  .icon.menu-btn {
+    display: block;
+    cursor: pointer;
+  }
+
+  .icon.menu-btn .line {
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    margin: 4px 0;
+    transition: transform 0.3s ease;
+  }
+
+  .icon.menu-btn.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .icon.menu-btn.active .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .icon.menu-btn.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .navbar .menu-list {
+    display: none;
+  }
+
+  .navbar .menu-list.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(255, 165, 0);
+    padding: 40px 0;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .navbar .menu-list li {
+    margin-top: 45px;
+  }
+
+  .navbar .menu-list li a {
+    font-size: 23px;
+  }
+}
